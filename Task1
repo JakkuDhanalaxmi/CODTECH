@@ -1,0 +1,56 @@
+class Addition:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def calculate(self):
+        return self.x + self.y
+
+class Subtraction:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def calculate(self):
+        return self.x - self.y
+
+class Multiplication:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+          
+    def calculate(self):
+        return self.x * self.y
+
+class Division:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def calculate(self):
+        if self.y != 0:
+            return self.x / self.y
+        else:
+            return "Error: Division by zero"
+
+def main():
+    x = float(input("Enter the first number: "))
+    y = float(input("Enter the second number: "))
+    
+    addition = Addition(x, y)
+    subtraction = Subtraction(x, y)
+    multiplication = Multiplication(x, y)
+    division = Division(x, y)
+    
+    add_result = addition.calculate()
+    sub_result = subtraction.calculate()
+    mul_result = multiplication.calculate()
+    div_result = division.calculate()
+    
+    print(f"Addition result: {add_result}")
+    print(f"Subtraction result: {sub_result}")
+    print(f"Multiplication result: {mul_result}")
+    print(f"Division result: {div_result}")
+
+if __name__ == "__main__":
+    main()
